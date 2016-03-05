@@ -1,4 +1,4 @@
-/*alert with muted back*/
+/*alert with muted back1*/
 
  <!--The overlay and message box-->
         <div id="fuzz">
