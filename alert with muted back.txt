@@ -1,4 +1,4 @@
-Алерт с затемняющимся фоном
+/*alert with muted back*/
 
  <!--The overlay and message box-->
         <div id="fuzz">
@@ -38,7 +38,7 @@
 $(document).ready(function(){
     //Tuned high of layer, to full up window after click
     $("#fuzz").css("height", $(document).height());
-    //При нажатии на ссылку запускается процес
+    //ГЏГ°ГЁ Г­Г Г¦Г ГІГЁГЁ Г­Г  Г±Г±Г»Г«ГЄГі Г§Г ГЇГіГ±ГЄГ ГҐГІГ±Гї ГЇГ°Г®Г¶ГҐГ±
     $(".alert").click(function(){
 
         $("#fuzz").fadeIn();
