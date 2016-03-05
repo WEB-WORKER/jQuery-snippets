@@ -11,7 +11,7 @@
             <a class="alert" href="#" >Alert Me!</a>
         </div>
 
-/*Стили для верхнего слоя и всплывающего окна*/
+/*Styles for forst layer and popup-window*/
 #fuzz{ position:absolute;
     top:0;
     left:0;
@@ -21,7 +21,7 @@
     opacity:0.5;
     display:none;
     text-align:left; }
-/*Позиционирование окна в самом центре*/
+/*Posision in center*/
 .msgbox{ position:absolute;
     width:300px;
     height:200px;
@@ -32,11 +32,11 @@
     margin-top: -100px;
     margin-left: -150px; }
 .msgbox img {border:none; margin:5px;}
-/*"X" (крестик) в правом верхнем углу окна*/
+/*"X" in the right top side*/
 .close{ top:0px; float:right; }
 
 $(document).ready(function(){
-    //Подстраивает высоту слоя наложения, чтобы полностью окно было заполено при нажатии на ссылку
+    //Tuned high of layer, to full up window after click
     $("#fuzz").css("height", $(document).height());
     //При нажатии на ссылку запускается процес
     $(".alert").click(function(){
@@ -44,13 +44,13 @@ $(document).ready(function(){
         $("#fuzz").fadeIn();
         return false;
     });
-    //При закрытии окна - все возвращается на свои места
+    //After window close - all turned back
     $(".close").click(function(){
         $("#fuzz").fadeOut();
         return false;
     });
 });
-//Данные строки следят за правильным отображением, если даже пользователь изменил размер окна браузера
+//If user changed size of window this code correct
 $(window).bind("resize", function(){
     $("#fuzz").css("height", $(window).height());
 

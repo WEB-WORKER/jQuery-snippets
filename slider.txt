@@ -1,4 +1,4 @@
-<!--Слайдер-->
+<!--Slider-->
     <div class="slider">
       <ul>
         <li><img src="http://lorempixel.com/400/200/animals" alt=""></li>
@@ -9,7 +9,7 @@
     </div>
    </div>
 
-/*Слайдер*/
+/*Slider*/
  .slider {
  z-index: 9;
  width: 700px;
@@ -55,7 +55,7 @@
  background: #2e9419;
  }
 
-/*js Слайдера*/
+/*js slider*/
 $(document).ready(function() {
  $(".slider").each(function () { // обрабатываем каждый слайдер
   var obj = $(this);

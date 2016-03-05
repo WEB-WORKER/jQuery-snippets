@@ -1,4 +1,4 @@
-Правильное создание меню jQuery
+Right creating of menu jQuery
 
 <script>
     $(document).ready(function(e){
