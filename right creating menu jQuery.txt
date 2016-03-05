@@ -1,0 +1,87 @@
+Правильное создание меню jQuery
+
+<script>
+    $(document).ready(function(e){
+      $('#navigation-menu ul li').click(function(e) {
+        $('#navigation-menu ul li').removeClass("active"); // удаляем у всех ссылок класс active
+        $(this).addClass("active"); // устанавливаем класс active при нажатии
+      });
+    });
+ </script>
+
+<nav id="navigation-menu">
+              <ul>
+                <li class="active"><a href="#section-1">Home</a></li>
+                <li><a href="#section-2">Blog</a></li>
+                <li><a href="#section-3">About</a></li>
+                <li><a href="#section-4">Support</a></li>
+                <li><a href="#section-5">Contact</a></li>
+              </ul>
+            </nav>
+
+
+#navigation-menu{
+	min-width:400px;
+	max-width:1000px;
+	margin:20px auto;
+}
+#navigation-menu ul{
+	display:table-row;
+}
+#navigation-menu ul li {
+	display:table-cell;
+	width:200px;
+	height:50px;
+	vertical-align: middle;
+}
+#navigation-menu ul li.active{
+	border: 5px solid #d94f5c;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+}
+#navigation-menu ul li.active:hover{
+	border: 5px solid #d94f5c;
+	-webkit-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+}
+#navigation-menu ul li a{
+	font-family: Get-Social-Font;
+	font-weight:600;
+	font-size:14pt;
+	color: #8D8C8C;
+	display:table-cell;
+	width:1000px;
+	text-align:center;
+	vertical-align: middle;
+	outline:none;
+}
+#navigation-menu ul li.active a{
+	color: #d94f5c;
+	text-decoration:none;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+}
+#navigation-menu ul li.active a:hover{
+	color:#E88A93;
+}
+#navigation-menu ul li:hover{
+	border: 5px solid #F5B7BD;
+	-webkit-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+}
+
+#navigation-menu ul li a:hover{
+	text-decoration:none;
+	color: #E88A93;
+	font-family: Get-Social-Font;
+	font-weight:600;
+	font-size:14pt;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+

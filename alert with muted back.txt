@@ -1,0 +1,57 @@
+Алерт с затемняющимся фоном
+
+ <!--The overlay and message box-->
+        <div id="fuzz">
+            <div class="msgbox">
+                <a class="close" href="#" ><img src="close.jpg"/></a>
+            </div>
+        </div>
+        <!--The content to be hidden-->
+        <div id="content">
+            <a class="alert" href="#" >Alert Me!</a>
+        </div>
+
+/*Стили для верхнего слоя и всплывающего окна*/
+#fuzz{ position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;
+    background: #000;
+    opacity:0.5;
+    display:none;
+    text-align:left; }
+/*Позиционирование окна в самом центре*/
+.msgbox{ position:absolute;
+    width:300px;
+    height:200px;
+    z-index:200;
+    border:5px solid #222;
+    background: #FFF;
+    top: 50%; left: 50%;
+    margin-top: -100px;
+    margin-left: -150px; }
+.msgbox img {border:none; margin:5px;}
+/*"X" (крестик) в правом верхнем углу окна*/
+.close{ top:0px; float:right; }
+
+$(document).ready(function(){
+    //Подстраивает высоту слоя наложения, чтобы полностью окно было заполено при нажатии на ссылку
+    $("#fuzz").css("height", $(document).height());
+    //При нажатии на ссылку запускается процес
+    $(".alert").click(function(){
+
+        $("#fuzz").fadeIn();
+        return false;
+    });
+    //При закрытии окна - все возвращается на свои места
+    $(".close").click(function(){
+        $("#fuzz").fadeOut();
+        return false;
+    });
+});
+//Данные строки следят за правильным отображением, если даже пользователь изменил размер окна браузера
+$(window).bind("resize", function(){
+    $("#fuzz").css("height", $(window).height());
+
+});

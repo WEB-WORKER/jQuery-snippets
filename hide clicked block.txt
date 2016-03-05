@@ -1,0 +1,19 @@
+.someDiv{
+	width:200px;
+	height:20px;
+	position:absolute;
+	z-index:100;
+	border: 1px solid #000;
+}
+#modalDiv{
+	width:200px;
+	height:20px;	
+	position:absolute;
+	background-color: #fff;
+
+}
+
+
+$('.someDiv').on('click', function(e){
+        var modal = $('#modalDiv').hide();
+      })

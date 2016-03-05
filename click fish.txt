@@ -1,0 +1,5 @@
+ $('.someDiv').on('click', function(e){
+/*Ваши анимации. Например:*/
+        $("#div1").animate({width: "90%"}, 350, function()
+{alert ("The animation has finished running.");});
+      })

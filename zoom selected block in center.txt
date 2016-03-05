@@ -1,0 +1,31 @@
+<div id="div5" class="someDiv"></div>
+
+    <div id="modalDiv"></div>
+
+<style>
+.someDiv{
+	width:150px;
+	height:150px;
+	display:inline-block;
+}
+#div1{ background-color: blue;}
+#div2{ background-color: green;}
+#div3{ background-color: yellow;}
+#div4{ background-color: black;}
+#div5{ background-color: grey;}
+
+#modalDiv{
+	width:400px;
+	height:400px;
+	position:absolute;
+	background-color: green;
+}
+</style>
+
+<script>
+      $('.someDiv').on('click', function(e){
+        var modal = $('#modalDiv');
+        modal.css('top', (window.innerHeight  - modal.height())/2);
+        modal.css('left', (window.innerWidth - modal.width())/2);        
+      })
+    </script>
